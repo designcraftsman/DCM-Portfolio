@@ -1,0 +1,49 @@
+.section-light {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: $light;
+    height: 100vh;
+    padding: 80px 30px;
+    margin-top: -90px;
+    overflow: hidden;
+    color: $dark;
+
+    &__hero {
+        border-radius: 100px;
+        background-color: $light;
+        height: 100vh;
+        padding: 0 30px;
+        z-index: 9999;
+        position: relative;
+    }
+}
+
+.section-dark {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: $dark;
+    padding: 80px 30px;
+    margin-top: -90px;
+    overflow: hidden;
+    color: $white;
+}
+
+
+.section-light:nth-child(1) {
+    z-index: 98; // First section, on top
+    position: relative;
+}
+
+.section-dark:nth-child(1) {
+    z-index: 99; // Second section, below
+    position: relative;
+}
+.section-light:nth-child(2) {
+    z-index: 4; // First section, on top
+    position: relative;
+}
+
+.section-dark:nth-child(2) {
+    z-index: 5; // Second section, below
+    position: relative;
+}
