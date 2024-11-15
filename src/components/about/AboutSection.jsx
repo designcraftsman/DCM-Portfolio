@@ -4,7 +4,7 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 const AboutSection = () =>{
     return (
     <div className="bg-dark">
-        <section className="section-light  bg-image text-dark ">
+        <section className="section-light section-light-1 bg-image text-dark ">
             <div className="container my-5 py-5">
                 <h2 className="display-3 col-5">
                 Much in Little

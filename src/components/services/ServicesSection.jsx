@@ -6,7 +6,7 @@ import Service2   from "../../assets/icons/services/2.svg";
 const ServicesSection = () =>{
     return (
         <div className="bg-light">
-        <section className="section-dark">
+        <section className="section-dark section-dark-1">
             <div className="container my-5 py-5">
                 <h2 className="display-3 col-5">
                     Solutions for Your Vision

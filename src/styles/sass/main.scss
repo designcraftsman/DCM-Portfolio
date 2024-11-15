@@ -5,7 +5,16 @@
 @import 'abstracts/variables';
 @import 'base/typography';
 @import 'layout/sections';
+@import 'components/navbar';
+@import 'components/headerLight';
+@import 'components/aboutHeader';
+@import 'components/contactHeader';
+@import 'components/projectCard';
+@import 'components/portfolioHeader';
 @import 'components/servicesIcon';
 @import 'components/testimonialCard';
 @import 'components/aboutSection';
+@import 'components/teamCard';
+@import 'pages/contact';
+@import 'pages/about';
 @import 'vendors/bootstrap';

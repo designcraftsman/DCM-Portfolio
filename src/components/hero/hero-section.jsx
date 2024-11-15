@@ -5,9 +5,9 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 const HeroSection = () => {
   return (
     <div className='bg-dark'>
-        <section className='section-light__hero py-5' >
+        <section className='section-light__hero py-5 ' >
             <NavbarDark />
-            <div className='d-flex py-5 justify-content-between align-items-center'>
+            <div className='d-flex py-5 justify-content-between align-items-center my-5'>
                 <div className='col-5 m-auto'>
                     <h1 className='display-3 '>
                     Web Design Rutland 

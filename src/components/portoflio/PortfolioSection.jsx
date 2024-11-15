@@ -4,7 +4,7 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 const PortfolioSection = () =>{
     return(
         <div className="bg-light">
-        <section className="section-dark">
+        <section className="section-dark section-dark-2">
             <div className="container my-5  py-5">
                 <h2 className="display-3 col-6">
                     Featured Projects

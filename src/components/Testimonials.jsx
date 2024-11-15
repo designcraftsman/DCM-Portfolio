@@ -4,7 +4,7 @@ import quotes from '../assets/icons/testimonials/quotes.svg';
 const Testimonials = () => {
   return (
     <div className='bg-dark'>
-        <section className='section-light' >
+        <section className='section-light section-light-2' >
             <div className='container'>
                 <div className='row align-items-center justify-content-between'>
                 <h2 className='display-2 col-6'>

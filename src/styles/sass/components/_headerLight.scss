@@ -1,0 +1,14 @@
+.header-text{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+}
+.header-light{
+    border-radius: 100px;
+    background-color: $light;
+    height: 70vh;
+    overflow: hidden;
+    color: $dark;
+    position: relative;
+    z-index: 150;
+}

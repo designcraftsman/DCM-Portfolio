@@ -41,24 +41,206 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   color: #fff;
 }
 
-.section-light:nth-child(1) {
-  z-index: 98;
+.section-dark-1 {
+  z-index: 100;
   position: relative;
 }
 
-.section-dark:nth-child(1) {
+.section-light-1 {
   z-index: 99;
   position: relative;
 }
 
-.section-light:nth-child(2) {
-  z-index: 4;
+.section-dark-2 {
+  z-index: 98;
   position: relative;
 }
 
-.section-dark:nth-child(2) {
-  z-index: 5;
+.section-light-2 {
+  z-index: 96;
   position: relative;
+}
+
+.section-dark-3 {
+  z-index: 95;
+  position: relative;
+}
+
+.navbar {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.navbar {
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar-top {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.75); /* Change to your desired color */
+  opacity: 0.9;
+}
+
+.navbar-menu-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent for a dark menu */
+  width: 100vw;
+  height: 100vh;
+  color: var(--white, #fff); /* Replace $white with CSS variable or color */
+  z-index: 200;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.6s ease-out, backdrop-filter 0.6s ease-out;
+}
+.navbar-menu-dark a {
+  color: var(--white, #fff); /* Replace $white with CSS variable or color */
+}
+
+.navbar-menu-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(217, 217, 217, 0.7);
+  color: black;
+  z-index: 200;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.6s ease-out, backdrop-filter 0.6s ease-out;
+}
+
+.navbar-menu-light.open {
+  opacity: 1; /* Fade in */
+  backdrop-filter: blur(10px); /* Apply blur */
+}
+
+.navbar-menu-light.closed {
+  opacity: 0; /* Fade out */
+  backdrop-filter: blur(0px);
+}
+
+.navbar-menu-dark.open {
+  opacity: 1; /* Fade in */
+  backdrop-filter: blur(20px); /* Apply blur */
+}
+
+.navbar-menu-dark.closed {
+  opacity: 0; /* Fade out */
+  backdrop-filter: blur(0px);
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+}
+
+.header-light {
+  border-radius: 100px;
+  background-color: #D9D9D9;
+  height: 70vh;
+  overflow: hidden;
+  color: #000;
+  position: relative;
+  z-index: 150;
+}
+
+.about-header {
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  z-index: 150;
+  height: 100vh;
+  border-radius: 100px;
+  /* Add a pseudo-element to apply the brightness filter */
+}
+.about-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the background image */
+  filter: brightness(50%);
+  z-index: 102; /* Position it behind the text but above the background */
+}
+.about-header__content {
+  z-index: 103;
+  position: absolute;
+  top: 60%;
+  left: 7%;
+}
+
+.contact-header {
+  height: 100vh;
+  border-radius: 100px;
+  position: relative;
+  z-index: 150;
+}
+.contact-header__content {
+  position: absolute;
+  top: 40%;
+  left: 7%;
+}
+
+.contact-image {
+  position: relative;
+  overflow: hidden; /* Prevents ::after overflow if needed */
+}
+
+.contact-image::after {
+  content: "";
+  background-image: url("https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Places the background behind the text */
+}
+
+.contact-image * {
+  position: relative;
+  z-index: 3; /* Ensures the text appears above both the background and overlay */
+}
+
+.project-card__image {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.portfolio-header {
+  height: 100vh;
+  border-radius: 100px;
+  background-color: #D9D9D9;
+  overflow: hidden;
+  color: #000;
+  position: relative;
+  z-index: 100;
+}
+.portfolio-header__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50px;
 }
 
 .service-icon {
@@ -106,6 +288,29 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
 .bg-image * {
   position: relative;
   z-index: 3; /* Ensures the text appears above both the background and overlay */
+}
+
+.team-card {
+  border: 1px solid #000;
+  border-radius: 50px;
+}
+.team-card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.contact-icon {
+  width: 60px;
+}
+
+.about-content-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50px;
 }
 
 /*!
