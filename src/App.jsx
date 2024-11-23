@@ -10,12 +10,14 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import ServiceDetails from "./pages/ServiceDetails";
 import ProjectDetails from "./pages/ProjectDetails";
-
+import TextRevealAnimation from "./common/TextRevealAnimation";
 
 
 function App() {
   return (
     <React.Fragment>
+      <TextRevealAnimation/>
+      <NavbarDark />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,8 +28,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/project-details" element={<ProjectDetails />} />
         </Routes>
-      </Router>
-      <Footer />
+      </Router> 
     </React.Fragment>
   );
 }

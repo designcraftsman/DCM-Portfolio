@@ -1,20 +1,26 @@
 
 
 @import 'layout/body';
+@import 'layout/containers';
 @import 'abstracts/fonts';
 @import 'abstracts/variables';
+@import 'layout/parallex';
+@import 'vendors/bootstrap';
+@import 'components/button';
 @import 'base/typography';
 @import 'layout/sections';
 @import 'components/navbar';
+@import 'components/footer';
+@import 'components/textReveal';
+@import 'components/heroSection';
 @import 'components/headerLight';
 @import 'components/aboutHeader';
 @import 'components/contactHeader';
 @import 'components/projectCard';
 @import 'components/portfolioHeader';
 @import 'components/servicesIcon';
-@import 'components/testimonialCard';
+@import 'components/testimonial';
 @import 'components/aboutSection';
 @import 'components/teamCard';
 @import 'pages/contact';
 @import 'pages/about';
-@import 'vendors/bootstrap';

@@ -1,74 +1,201 @@
+.navbar-dark-scrolled {
+  background-color: rgba(217, 217, 217, 0.7);
+  backdrop-filter: blur(5px);
+  
+  // Add wrapper to prevent blur on content
+  .navbar-content {
+    backdrop-filter: none;
+  }
+}
+
+.navbar-light-scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  
+  .navbar-content {
+    backdrop-filter: none;
+  }
+}
+
 .navbar{
+  transition: all 0.6s ease;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
-}
 
-.navbar {
-  transition: background-color 0.5s ease, opacity 0.5s ease;
-}
+  &-light{
+    .navbar-top {
+      background-color: transparent;
+    }
+    
 
-.navbar-top {
-  background-color: transparent;
-  opacity: 1;
-}
-
-.navbar-scrolled {
-  background-color: rgba(0, 0, 0, 0.75); /* Change to your desired color */
-  opacity: 0.9;
-}
-
-
-.navbar-menu-dark {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent for a dark menu */
-    width: 100vw;
-    height: 100vh;
-    color: var(--white, #fff); /* Replace $white with CSS variable or color */
-    z-index: 200;
-    opacity: 0;
-    backdrop-filter: blur(0px); 
-    transition: opacity 0.6s ease-out, backdrop-filter 0.6s ease-out; 
-  
-    a {
-      color: var(--white, #fff); /* Replace $white with CSS variable or color */
+    .navbar-brand {
+      color: white;
+      
+      &.text-dark {
+        color: black;
+      }
     }
   }
-  
-  .navbar-menu-light {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(217, 217, 217, 0.7);
-    color: black;
-    z-index: 200;
+
+  &-dark {
+    .navbar-top {
+      background-color: transparent;
+    }
+    
+    .navbar-scrolled {
+      background-color: white;
+    }
+
+    .navbar-brand {
+      color: black;
+      
+      &.text-white {
+        color: white;
+      }
+    }
+  }
+}
+
+.menu-link {
+  color: white;
+  transition: all 0.6s ease;
+  opacity: 1;
+  transform: translateY(20px);
+  filter: blur(0);
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.blur {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+.navbar-menu-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(0px);
+  transition: all 0.6s ease-out;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(10px);
+  }
+
+  &.closed {
     opacity: 0;
-    backdrop-filter: blur(0px); 
-    transition:  opacity 0.6s ease-out, backdrop-filter 0.6s ease-out; 
+    visibility: hidden;
   }
-  
-  .navbar-menu-light.open {
-    opacity: 1; /* Fade in */
-    backdrop-filter: blur(10px); /* Apply blur */
-  }
-  
-  .navbar-menu-light.closed {
-    opacity: 0; /* Fade out */
-    backdrop-filter: blur(0px);
+}
 
+
+
+.hamburger-init {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 201;
+  background-color: $dark;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bar {
+    background: white;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    transition: all 0.3s;
   }
 
-  .navbar-menu-dark.open {
-    opacity: 1; /* Fade in */
-    backdrop-filter: blur(20px); /* Apply blur */
+  .top-bar {
+    transform: translateY(-4px);
+  }
+
+  .bottom-bar {
+    transform: translateY(4px);
+  }
+
+  &.active {
+    .top-bar {
+      transform: translateY(0) rotate(45deg);
+    }
+    .bottom-bar {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}
+
+.bar {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.6s;
+
+  &.middle-bar {
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  &.bottom-bar {
+    bottom: 10;
+  }
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 120px;
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99999;
+
+  &.visible {
+    transform: scale(100);
+  }
+}
+
+.navbar-brand.active {
+  color: $white;
+}
+
+.navbar-reveal .reveal-text {
+  transition-delay: 0.1s;
+}
+
+.navbar-brand {
+  transition: color 0.3s ease;
+  
+  &.text-white {
+    color: white;
   }
   
-  .navbar-menu-dark.closed {
-    opacity: 0; /* Fade out */
-    backdrop-filter: blur(0px);
+  &.text-dark {
+    color: black;
   }
-  
-  
+}
+
+.navbar-dark{
+  z-index: 999999999999;
+}

@@ -1,0 +1,159 @@
+/* Button container styling */
+.contact-us-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark;
+  background-color: transparent;
+  border: 1px solid $dark;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden; /* Prevent animation overflow */
+  transition: color 0.3s ease;
+}
+
+/* Background animation using pseudo-element */
+.contact-us-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 32px); /* Start near the icon (24px icon + 8px gap) */
+  width: 0;
+  height: 0;
+  background-color: $dark;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+/* On hover, expand the pseudo-element */
+.contact-us-btn:hover::before {
+  width: 200%;
+  height: 300%;
+}
+
+/* Ensure text and icon stay on top */
+.contact-us-btn > * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.6s ease;
+}
+
+
+/* Change text color on hover */
+.contact-us-btn:hover {
+  color: $white; /* Change only the text color */
+}
+
+/* Chevron icon styling */
+.contact-us-btn .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: $dark;
+  color: $white;
+  border-radius: 50%;
+  position: relative; /* Ensure it stays above the animation */
+  z-index: 1; /* Keep it on top of the background */
+  transition: all 0.3s ease;
+}
+
+/* Icon stays unchanged on hover */
+.contact-us-btn:hover .btn-icon {
+  background-color: $dark;
+  color: $white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Button container styling */
+.contact-us-btn-light {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $white; /* Start with light text color */
+  background-color: transparent;
+  border: 1px solid $white; /* Start with a light border */
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden; /* Prevent animation overflow */
+  transition: color 0.6s ease, border-color 0.6s ease;
+}
+
+/* Background animation using pseudo-element */
+.contact-us-btn-light::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 32px); /* Start near the icon (24px icon + 8px gap) */
+  width: 0;
+  height: 0;
+  background-color: $white; /* Start with the light color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+/* On hover, expand the pseudo-element */
+.contact-us-btn-light:hover::before {
+  width: 200%;
+  height: 300%;
+}
+
+/* Ensure text and icon stay on top */
+.contact-us-btn-light > * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Change text and border color on hover */
+.contact-us-btn-light:hover {
+  color: $dark; /* Switch text color to dark */
+  border-color: $dark; /* Switch border color to dark */
+}
+
+/* Chevron icon styling */
+.contact-us-btn-light .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: $white; /* Light icon background */
+  color: $dark; /* Dark icon color */
+  border-radius: 50%;
+  position: relative; /* Ensure it stays above the animation */
+  z-index: 1; /* Keep it on top of the background */
+  transition: all 0.3s ease;
+}
+
+/* Icon hover effect */
+.contact-us-btn-light:hover .btn-icon {
+  background-color: $dark; /* Dark icon background on hover */
+  color: $white; /* Light icon color on hover */
+}
+

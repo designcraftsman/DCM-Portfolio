@@ -10,7 +10,7 @@ const ServiceDetails = () => {
             <NavbarDark />
             <HeaderLight title="Strategy & Research" />
             <section className='bg-light'>
-                <div className='section-dark'>
+                <div className='section-dark section-dark-1'>
                     <div className='container my-5 py-5'>
                         <h2 className='display-4'>
                             Our Process

@@ -9,7 +9,7 @@ const ProjectDetails = () => {
         <NavbarDark />
         <PortfolioHeader />
         <section className='bg-light'>
-            <div className='section-dark'>
+            <div className='section-dark section-dark-1'>
                 <div className='container my-5 py-5'>
                     <div className='row my-5'>
                         <div className='col-6 my-3'>

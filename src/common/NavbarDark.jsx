@@ -1,98 +1,60 @@
 import React, { useState, useEffect } from "react";
-import { HiBars3BottomRight } from "react-icons/hi2";
 
 const NavbarDark = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Add a class when the user scrolls down more than 50px
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 700);
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <React.Fragment>
-      <nav
-        className={`navbar fixed-top ${
-          isScrolled ? "bg-light opacity-75" : "bg-transparent"
-        }`}
-      >
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center w-100">
-            <a className="navbar-brand fs-1" href="/">
+      <nav className={`navbar fixed-top navbar-dark ${isScrolled && !menuOpen ? "navbar-dark-scrolled" : "navbar-top"}`}>
+        <div className="container my-0 py-0">
+          <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
+            <a className={`navbar-brand fs-1 ${menuOpen ? "text-white" : ""}`} href="/">
               DCM
             </a>
-            <button
-              onClick={toggleMenu}
-              className="btn text-dark fs-1"
-              aria-label="Toggle Menu"
-            >
-              <HiBars3BottomRight />
+            <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
+              <div className={`hamburger-init ${menuOpen ? "active" : ""}`}>
+                <span className="bar top-bar"></span>
+                <span className="bar bottom-bar"></span>
+              </div>
             </button>
           </div>
         </div>
       </nav>
 
-      <div className={`navbar-menu-light ${menuOpen ? "open" : "closed"}`}>
+      <div className={`menu-wrapper ${menuOpen ? "visible" : ""}`}></div>
+      <div className={`navbar-menu-dark ${menuOpen ? "open" : "closed"}`}>
         <nav className="container my-5 py-5">
           <ul className="list-unstyled d-flex flex-column justify-content-center align-items-center">
-            <li className="my-4">
-              <a
-                href="/"
-                className="display-5 text-decoration-none p-3 fw-semibold"
-              >
-                Home
-              </a>
-            </li>
-            <li className="my-4">
-              <a
-                href="portfolio"
-                className="display-5 text-decoration-none p-3 fw-semibold"
-              >
-                Work
-              </a>
-            </li>
-            <li className="my-4">
-              <a
-                href="services"
-                className="display-5 text-decoration-none p-3 fw-semibold"
-              >
-                Services
-              </a>
-            </li>
-            <li className="my-4">
-              <a
-                href="contact"
-                className="display-5 text-decoration-none p-3 fw-semibold"
-              >
-                Contact
-              </a>
-            </li>
-            <li className="my-4">
-              <a
-                href="about"
-                className="display-5 text-decoration-none p-3 fw-semibold"
-              >
-                About
-              </a>
-            </li>
+            {[
+              { name: "Home", path: "/" },
+              { name: "Work", path: "/portfolio" },
+              { name: "Services", path: "/services" },
+              { name: "Contact", path: "/contact" },
+              { name: "About", path: "/about" },
+            ].map((link) => (
+              <li className="my-4" key={link.name}>
+                <a 
+                  href={link.path} 
+                  className={`menu-link display-5 text-decoration-none p-3 fw-semibold ${
+                    hoveredLink && hoveredLink !== link.name ? 'blur' : ''
+                  }`}
+                  onMouseEnter={() => setHoveredLink(link.name)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
