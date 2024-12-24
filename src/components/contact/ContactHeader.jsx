@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactHeader = () =>{
     return(
-        <section className='bg-dark'>
+        <header className='bg-dark'>
             <div className='contact-header contact-image py-5'>
                <div className='contact-header__content py-5 my-5 text-white'>
                 <h1 className='display-2 reveal-element'>
@@ -13,7 +13,7 @@ const ContactHeader = () =>{
                 </p>
                </div>
             </div>
-        </section>
+        </header>
     );
 }
 

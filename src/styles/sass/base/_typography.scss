@@ -4,6 +4,10 @@ p{
     line-height: 1.6;
 }
 
+.icon{
+    font-family: $font-family-heading;
+}
+
 .section-dark p{
     color:#888883;
 }
@@ -25,7 +29,7 @@ p{
 .display-5{
     line-height: 120%;
     letter-spacing: 0.6px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .display-6{

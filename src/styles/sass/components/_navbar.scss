@@ -1,5 +1,5 @@
 .navbar-dark-scrolled {
-  background-color: rgba(217, 217, 217, 0.7);
+  background-color: rgba(217, 217, 217, 0.5);
   backdrop-filter: blur(5px);
   
   // Add wrapper to prevent blur on content
@@ -9,7 +9,7 @@
 }
 
 .navbar-light-scrolled {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   
   .navbar-content {
@@ -79,7 +79,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   z-index: 99999;
   opacity: 0;
@@ -115,6 +115,13 @@
   align-items: center;
   justify-content: center;
 
+  &.light {
+    background-color: $light;
+    .bar {
+      background: $dark;
+    }
+  }
+  
   .bar {
     background: white;
     position: absolute;
@@ -164,7 +171,7 @@
   right: 120px;
   width: 35px;
   height: 35px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   transform: scale(0);
   transform-origin: center;
@@ -173,6 +180,22 @@
 
   &.visible {
     transform: scale(100);
+  }
+}
+
+.navbar-brand {
+  &:hover {
+    .brand-text {
+      filter: blur(3px);
+      transition: filter 0.3s ease;
+    }
+    .navbar-logo {
+      filter: blur(0);
+    }
+  }
+  .brand-text {
+    filter: blur(0);
+    transition: filter 0.3s ease;
   }
 }
 

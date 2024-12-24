@@ -29,6 +29,7 @@
 }
 
 .section-dark-1{
+    border-radius: 100px;
     z-index: 100;
     position: sticky;
 }
@@ -52,3 +53,6 @@
     position: sticky;
 }
 
+.container-rounded{
+    border-radius: 100px;
+}

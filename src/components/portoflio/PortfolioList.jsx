@@ -30,7 +30,7 @@ const portfolioData = [
 
 const PortfolioList = () => {
   return (
-    <section className='bg-light'>
+    <section className='bg-light container-rounded'>
       <div className='section-dark section-dark-1'>
         <div className='container my-5 py-5'>
           {portfolioData.map((project) => (

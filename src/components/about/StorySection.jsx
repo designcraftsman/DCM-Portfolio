@@ -2,7 +2,7 @@ import React from "react";
 
 const Story = () =>{
     return(
-        <section className="bg-light">
+        <section className="bg-light container-rounded">
             <div className="section-dark section-dark-1">
                 <div className="container my-5 py-5">
                     <div className="row">

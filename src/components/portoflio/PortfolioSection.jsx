@@ -34,7 +34,7 @@ const PortfolioSection = () => {
     <div className="bg-light">
       <section className="section-dark section-dark-2 ">
         <div className="container">
-          <h2 className="display-3 col-6 reveal-element">
+          <h2 className="display-4 col-6 reveal-element">
             Featured Projects
           </h2>
           <p className="fs-5 col-6 reveal-element">

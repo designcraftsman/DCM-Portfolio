@@ -7,10 +7,11 @@ import FAQsSection from '../components/faqs/FAQs';
 const Services =() =>{
     return (
         <React.Fragment>
-            <NavbarDark/>
             <HeaderLight title="Services Tailored to You."/>
-            <ServicesSection/>
-            <FAQsSection/>
+            <div className='content'>
+                <ServicesSection/>
+                <FAQsSection/>
+            </div>
         </React.Fragment>
     );
 }

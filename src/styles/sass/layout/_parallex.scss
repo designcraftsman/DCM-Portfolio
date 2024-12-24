@@ -8,6 +8,7 @@
   width: 100%;
   left: 0;
   position: fixed;
+  
 }
 
 #heightPage,
@@ -64,13 +65,13 @@ footer,
      -moz-transition-property: all;
       transition-property: all;
 
-  -webkit-transition-duration: 0.4s;
-     -moz-transition-duration: 0.4s;
-      transition-duration: 0.4s;
+  -webkit-transition-duration: 0.2s;
+     -moz-transition-duration: 0.2s;
+      transition-duration: 0.2s;
 
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+     -moz-transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+      transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 body {

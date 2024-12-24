@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const NavbarLight = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,16 +15,15 @@ const NavbarLight = () => {
 
   return (
     <React.Fragment>
-      <nav className={`navbar fixed-top  navbar-light ${isScrolled &&!menuOpen ? "navbar-light-scrolled" : "navbar-top"}`}>
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center w-100">
-            <a className={`navbar-brand fs-1 reveal-element `} href="/">
+      <nav className={`navbar fixed-top navbar-light ${isScrolled && !menuOpen ? "navbar-light-scrolled" : "navbar-top"}`}>
+        <div className="container my-1 py-0">
+          <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
+            <a className={`navbar-brand fs-1 ${menuOpen ? "text-white" : ""}`} href="/">
               DCM
             </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
-              <div className={`hamburger-init white reveal-element  ${menuOpen ? "active" : ""}`}>
+              <div className={`hamburger-init light ${menuOpen ? "active" : ""}`}>
                 <span className="bar top-bar"></span>
-                <span className="bar middle-bar"></span>
                 <span className="bar bottom-bar"></span>
               </div>
             </button>
@@ -43,7 +43,14 @@ const NavbarLight = () => {
               { name: "About", path: "/about" },
             ].map((link) => (
               <li className="my-4" key={link.name}>
-                <a href={link.path} className="menu-link display-5 text-decoration-none p-3 fw-semibold">
+                <a 
+                  href={link.path} 
+                  className={`menu-link display-5 text-decoration-none p-3 fw-semibold ${
+                    hoveredLink && hoveredLink !== link.name ? 'blur' : ''
+                  }`}
+                  onMouseEnter={() => setHoveredLink(link.name)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
                   {link.name}
                 </a>
               </li>

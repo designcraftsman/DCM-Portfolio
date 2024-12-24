@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../assets/logo/logo-dark.svg";
 
 const NavbarDark = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,11 +17,24 @@ const NavbarDark = () => {
   return (
     <React.Fragment>
       <nav className={`navbar fixed-top navbar-dark ${isScrolled && !menuOpen ? "navbar-dark-scrolled" : "navbar-top"}`}>
-        <div className="container my-0 py-0">
+        <div className="container my-1 py-0">
           <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
-            <a className={`navbar-brand fs-1 ${menuOpen ? "text-white" : ""}`} href="/">
-              DCM
-            </a>
+          <a className={`navbar-brand fs-2 fw-bold icon ${menuOpen ? "text-white" : ""}`} href="/">
+            <img 
+              src={logo} 
+              alt="GlowCore Logo" 
+              className="navbar-logo"
+              style={{ 
+                height: '40px',
+                width: 'auto',
+                marginRight: '10px',
+                transition: 'all 0.3s ease'
+              }}
+            />
+            <span className="brand-text">
+              MotionCraft
+            </span>
+          </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
               <div className={`hamburger-init ${menuOpen ? "active" : ""}`}>
                 <span className="bar top-bar"></span>

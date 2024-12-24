@@ -10,53 +10,54 @@ import email from '../assets/icons/contact/mail.svg';
 const Contact = () => {
     return (
        <React.Fragment>
-            <NavbarLight />
             <ContactHeader />
-            <section className='bg-light'>
-                <div className='section-dark section-dark-1'>
-                    <div className='container my-5 py-5'>
-                        <div className='row'>
-                            <div className='col-6'>
-                                <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
-                                    <img src={location} className='contact-icon' alt="" />
-                                    <p className='fs-5 m-0'>
-                                    Mirpur 12, Block C, Dhaka, BD.
-                                    </p>
-                                </div>
-                                <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
-                                    <img src={phone} className='contact-icon' alt="" />
-                                    <p className='fs-5 m-0'>
-                                    +55 (9900) 666 22
-                                    </p>
-                                </div>
-                                <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
-                                    <img src={email} className='contact-icon' alt="" />
-                                    <p className='fs-5 m-0'>
-                                    info.mirpur@gmail.com
-                                    </p>
-                                </div>
-                            </div>
-                            <div className='col-6 m-auto'>
-                                <form className='row gap-5'>
-                                    <div className='col-5 border-bottom'>
-                                        <p className='fs-4 m-0'>Your Name</p>
+            <section className='content'>
+                <section className='bg-light container-rounded'>
+                    <div className='section-dark section-dark-1'>
+                        <div className='container my-5 py-5'>
+                            <div className='row'>
+                                <div className='col-6'>
+                                    <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
+                                        <img src={location} className='contact-icon' alt="" />
+                                        <p className='fs-5 m-0'>
+                                        Mirpur 12, Block C, Dhaka, BD.
+                                        </p>
                                     </div>
-                                    <div className='col-5 border-bottom m-auto'>
-                                        <p className='fs-4 m-0'>Your Email</p>
+                                    <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
+                                        <img src={phone} className='contact-icon' alt="" />
+                                        <p className='fs-5 m-0'>
+                                        +55 (9900) 666 22
+                                        </p>
                                     </div>
-                                    <div className='col-11 border-bottom pb-5'>
-                                        <p className='fs-4 m-0'>Your Message</p>
+                                    <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
+                                        <img src={email} className='contact-icon' alt="" />
+                                        <p className='fs-5 m-0'>
+                                        info.mirpur@gmail.com
+                                        </p>
                                     </div>
-                                    <button className='btn btn-transparent border rounded col-2 text-white'>
-                                        Send
-                                    </button>
-                                </form>
+                                </div>
+                                <div className='col-6 m-auto'>
+                                    <form className='row gap-5'>
+                                        <div className='col-5 border-bottom'>
+                                            <p className='fs-4 m-0'>Your Name</p>
+                                        </div>
+                                        <div className='col-5 border-bottom m-auto'>
+                                            <p className='fs-4 m-0'>Your Email</p>
+                                        </div>
+                                        <div className='col-11 border-bottom pb-5'>
+                                            <p className='fs-4 m-0'>Your Message</p>
+                                        </div>
+                                        <button className='btn btn-transparent border rounded col-2 text-white'>
+                                            Send
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+                <Map/>
             </section>
-            <Map/>
        </React.Fragment>
     );
 };

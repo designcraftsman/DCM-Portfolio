@@ -48,7 +48,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   return (
-    <div className="bg-light">
+    <div className="bg-light container-rounded">
       <section className="section-dark section-dark-1 ">
         <div className="container ">
           <h2 className="display-6  col-5 reveal-element">
@@ -60,8 +60,8 @@ const ServicesSection = () => {
 
           <div className="row mt-5 gap-3 justify-content-between">
             {servicesData.map((service) => (
-              <Link 
-                to={`/service-details`} 
+              <a 
+                href="/service-details" 
                 key={service.id} 
                 className="col-3 text-decoration-none  service-card"
               >
@@ -76,7 +76,7 @@ const ServicesSection = () => {
                     {service.description}
                   </p>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

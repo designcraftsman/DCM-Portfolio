@@ -21,7 +21,7 @@ const HeroSection = () => {
   return (
     <header className='bg-dark'>
       <section className='section-light__hero py-5'>
-        <div className='container d-flex   justify-content-between align-items-center '>
+        <div className='container my-0 d-flex   justify-content-between align-items-center '>
           <div className='col-5'>
             <h1 className='display-5  mb-3'>
               <span className='reveal-text d-block'>Web Design Rutland</span>
@@ -33,7 +33,7 @@ const HeroSection = () => {
             </p>
             <div className='reveal-text button-delay'>
             <button className="btn contact-us-btn">
-              <span className="btn-text">Contact Us</span> 
+              <span className="btn-text">Contact us</span> 
               <span className="btn-icon"><IoChevronForwardSharp /></span>
             </button>
             </div>
@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className='col-6 '>
             <img 
               src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              className='img-fluid rounded-5 reveal-text' 
+              className='hero-img rounded-5 reveal-text' 
               alt="" 
             />
           </div>
