@@ -1,4 +1,12 @@
 .project-card {
+  transition: all 0.3s ease;
+
+  &.blur {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
   &__image-container {
     position: relative;
     perspective: 1000px;
@@ -11,6 +19,11 @@
     object-fit: cover;
     border-radius: 50px;
     box-shadow: 0 1px 5px #3e3e3e;
+    &.blur{
+      filter:blur(3px);
+      opacity: 0.5;
+      transform: scale(0.5);
+    }
     
     .glow {
       position: absolute;

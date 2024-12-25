@@ -19,7 +19,9 @@ const NavbarLight = () => {
         <div className="container my-1 py-0">
           <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
             <a className={`navbar-brand fs-1 ${menuOpen ? "text-white" : ""}`} href="/">
-              DCM
+              <span className="logo">
+                Motion Craft
+              </span>
             </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
               <div className={`hamburger-init light ${menuOpen ? "active" : ""}`}>

@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import Service1 from "../../assets/icons/services/1.svg";
 import Service2 from "../../assets/icons/services/2.svg";
 import Service3 from "../../assets/icons/services/3.svg";
@@ -47,6 +46,8 @@ const servicesData = [
 ];
 
 const ServicesSection = () => {
+  const [hoveredService, setHoveredService] = useState(null);
+
   return (
     <div className="bg-light container-rounded">
       <section className="section-dark section-dark-1 ">
@@ -63,7 +64,11 @@ const ServicesSection = () => {
               <a 
                 href="/service-details" 
                 key={service.id} 
-                className="col-3 text-decoration-none  service-card"
+                className={`col-3 text-decoration-none service-card ${
+                  hoveredService && hoveredService !== service.id ? 'blur' : ''
+                }`}
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <div className="service-content">
                   <div className="reveal-element m-0 p-0">

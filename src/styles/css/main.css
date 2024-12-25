@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap");
 .container {
   margin: 50px 0;
   padding: 50px 0;
@@ -12113,6 +12114,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+}
+
 .section-light {
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -12193,6 +12198,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   transition: all 0.6s ease;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+  z-index: 200000;
 }
 .navbar-light .navbar-top {
   background-color: transparent;
@@ -12202,6 +12208,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
 }
 .navbar-light .navbar-brand.text-dark {
   color: black;
+}
+.navbar__logo {
+  width: 150px;
 }
 .navbar-dark .navbar-top {
   background-color: transparent;
@@ -12263,18 +12272,37 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   top: 0px;
   right: 0px;
   cursor: pointer;
-  z-index: 201;
+  z-index: 200001;
   background-color: #121212;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.hamburger-init::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130%;
+  height: 130%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+.hamburger-init:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
 .hamburger-init.light {
   background-color: #D9D9D9;
 }
 .hamburger-init.light .bar {
   background: #121212;
+}
+.hamburger-init.light::before {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .hamburger-init .bar {
   background: white;
@@ -12322,7 +12350,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   transform: scale(0);
   transform-origin: center;
   transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 99999;
+  z-index: 99998;
 }
 .menu-wrapper.visible {
   transform: scale(100);
@@ -12350,6 +12378,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
 
 .navbar-brand {
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 200001;
 }
 .navbar-brand.text-white {
   color: white;
@@ -12417,6 +12447,11 @@ img.reveal-text {
   width: 100%;
   height: 75vh;
   object-fit: cover;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+.hero-img:hover {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
 }
 
 .header-text {
@@ -12503,6 +12538,14 @@ img.reveal-text {
   z-index: 3; /* Ensures the text appears above both the background and overlay */
 }
 
+.project-card {
+  transition: all 0.3s ease;
+}
+.project-card.blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.95);
+}
 .project-card__image-container {
   position: relative;
   perspective: 1000px;
@@ -12514,6 +12557,11 @@ img.reveal-text {
   object-fit: cover;
   border-radius: 50px;
   box-shadow: 0 1px 5px #3e3e3e;
+}
+.project-card__image.blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.5);
 }
 .project-card__image .glow {
   position: absolute;
@@ -12551,6 +12599,19 @@ img.reveal-text {
   height: 400px;
   object-fit: cover;
   border-radius: 50px;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+}
+.service-card.blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 0.6s ease;
+}
+.service-card:hover {
+  transform: scale(1.05);
 }
 
 .service-icon {

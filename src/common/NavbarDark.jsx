@@ -19,21 +19,9 @@ const NavbarDark = () => {
       <nav className={`navbar fixed-top navbar-dark ${isScrolled && !menuOpen ? "navbar-dark-scrolled" : "navbar-top"}`}>
         <div className="container my-1 py-0">
           <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
-          <a className={`navbar-brand fs-2 fw-bold icon ${menuOpen ? "text-white" : ""}`} href="/">
-            <img 
-              src={logo} 
-              alt="GlowCore Logo" 
-              className="navbar-logo"
-              style={{ 
-                height: '40px',
-                width: 'auto',
-                marginRight: '10px',
-                transition: 'all 0.3s ease'
-              }}
-            />
-            <span className="brand-text">
-              MotionCraft
-            </span>
+          <a className={`navbar-brand fs-1  icon ${menuOpen ? "text-white" : ""}`} href="/">
+           
+            <img src={logo} className="navbar__logo" alt="" />
           </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
               <div className={`hamburger-init ${menuOpen ? "active" : ""}`}>

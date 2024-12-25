@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const ProjectCard = ({ title, image, link }) => {
+const ProjectCard = ({ title, image, link, isBlurred, onMouseEnter, onMouseLeave }) => {
   const imageRef = useRef(null);
   const [transform, setTransform] = useState('');
   const [glowBackground, setGlowBackground] = useState('');
@@ -66,32 +66,38 @@ const ProjectCard = ({ title, image, link }) => {
   }, []);
 
   return (
-    <a href="project-details" className="my-5 project-card reveal-element text-decoration-none">
-      <div 
-        ref={imageRef}
-        className="project-card__image-container"
-        style={{ transform }}
-      >
-        <img 
-          src={image} 
-          alt={title} 
-          className="project-card__image"
-        />
-        <div className="glow" style={{ backgroundImage: glowBackground }}></div>
-      </div>
+    <div 
+      className={`project-card ${isBlurred ? 'blur' : ''}`}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <a href="project-details" className="my-5 project-card reveal-element text-decoration-none">
+        <div 
+          ref={imageRef}
+          className="project-card__image-container"
+          style={{ transform }}
+        >
+          <img 
+            src={image} 
+            alt={title} 
+            className="project-card__image"
+          />
+          <div className="glow" style={{ backgroundImage: glowBackground }}></div>
+        </div>
 
-      <div className="d-flex justify-content-between align-items-center text-white mt-3">
-        <p className="fs-6 fw-light">Design</p>
-        <p className="fs-6">2022</p>
-      </div>
-      <div>
-        <h3 className="fw-medium d-inline fs-6">{title}</h3>
-        <span className="seperator"></span>
-        <p className="d-inline fw-light fs-6">
-          Raising the foundations nurturing the brand and letting the website bloom
-        </p>
-      </div>
-    </a>
+        <div className="d-flex justify-content-between align-items-center text-white mt-3">
+          <p className="fs-6 fw-light my-1">Design</p>
+          <p className="fs-6 my-1">2022</p>
+        </div>
+        <div>
+          <h3 className="fw-medium d-inline fs-6">{title}</h3>
+          <span className="seperator"></span>
+          <p className="d-inline fw-light fs-6">
+            Raising the foundations nurturing the brand and letting the website bloom
+          </p>
+        </div>
+      </a>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
-import React from "react";
-import { IoChevronForwardSharp } from "react-icons/io5";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 const portfolioData = [
@@ -30,6 +29,8 @@ const portfolioData = [
 ];
 
 const PortfolioSection = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   return (
     <div className="bg-light">
       <section className="section-dark section-dark-2 ">
@@ -42,12 +43,14 @@ const PortfolioSection = () => {
           </p>
           <div className="row mt-5  d-flex justify-content-between">
             {portfolioData.map((project) => (
-            <div className="col-6 my-3 ">
+            <div className="col-6 my-3 " key={project.id}>
                 <ProjectCard
-                    key={project.id}
                     title={project.title}
                     image={project.image}
                     link={project.link}
+                    isBlurred={hoveredProject && hoveredProject !== project.id}
+                    onMouseEnter={() => setHoveredProject(project.id)}
+                    onMouseLeave={() => setHoveredProject(null)}
                 />
             </div> 
             ))}
