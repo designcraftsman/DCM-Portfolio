@@ -26,7 +26,12 @@
     &__content {
         z-index: 103;
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 7%;
+        @media screen and (max-width: 430px) {
+            left: 5%;
+            top: 20%;
+            
+        }
     }
 }

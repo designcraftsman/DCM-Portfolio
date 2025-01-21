@@ -6,8 +6,8 @@ const ContactSection = () =>{
         <section className="bg-dark">
             <div className="section-light section-light-1">
                 <div className="container my-5 py-5">
-                    <div className="row">
-                        <div className="col-5">
+                    <div className="row gap-3">
+                        <div className="col-lg-5 col-12">
                             <h3 className="display-4 reveal-element">
                             Let’s Bring Your Vision to Life
                             </h3>
@@ -21,7 +21,7 @@ const ContactSection = () =>{
                                 </button>
                             </div>
                         </div>
-                        <div className="col-5 m-auto reveal-element">
+                        <div className="col-lg-5 col-12 m-auto reveal-element">
                             <img src="https://images.pexels.com/photos/28948420/pexels-photo-28948420/free-photo-of-cathedrale-gothique-reflet-dans-une-flaque-d-eau-sur-un-pave.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-fluid rounded" alt="" />
                         </div>
                     </div>

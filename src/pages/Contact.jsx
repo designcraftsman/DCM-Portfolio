@@ -15,8 +15,8 @@ const Contact = () => {
                 <section className='bg-light container-rounded'>
                     <div className='section-dark section-dark-1'>
                         <div className='container my-5 py-5'>
-                            <div className='row'>
-                                <div className='col-6'>
+                            <div className='row gap-3'>
+                                <div className='col-lg-5 col-12'>
                                     <div className='d-flex align-items-center justify-content-start gap-3 my-4'>
                                         <img src={location} className='contact-icon' alt="" />
                                         <p className='fs-5 m-0'>
@@ -36,18 +36,18 @@ const Contact = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className='col-6 m-auto'>
+                                <div className='col-lg-5 col-12 m-auto'>
                                     <form className='row gap-5'>
-                                        <div className='col-5 border-bottom'>
+                                        <div className='col-lg-5 col-12 border-bottom'>
                                             <p className='fs-4 m-0'>Your Name</p>
                                         </div>
-                                        <div className='col-5 border-bottom m-auto'>
+                                        <div className='col-lg-5 col-12 border-bottom'>
                                             <p className='fs-4 m-0'>Your Email</p>
                                         </div>
-                                        <div className='col-11 border-bottom pb-5'>
+                                        <div className='col-12 border-bottom pb-5'>
                                             <p className='fs-4 m-0'>Your Message</p>
                                         </div>
-                                        <button className='btn btn-transparent border rounded col-2 text-white'>
+                                        <button className='btn btn-transparent border rounded  text-white'>
                                             Send
                                         </button>
                                     </form>

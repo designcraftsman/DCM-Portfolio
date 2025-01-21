@@ -7,7 +7,7 @@ import { CiFacebook , CiInstagram , CiLinkedin , CiTwitter} from "react-icons/ci
 
 const Footer =() => {
   return (
-    <footer className="bg-dark text-white pt-5">
+    <footer className="bg-dark text-white  pt-5">
       <div className="container my-0 py-0">
         <div className='row '>
           <div className='col-lg-6 col-10 border-end border-1  mx-auto'>

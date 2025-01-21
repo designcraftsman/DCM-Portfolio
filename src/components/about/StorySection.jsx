@@ -9,7 +9,7 @@ const Story = () =>{
                         <h1 className="display-4 reveal-element">
                             Our Story
                         </h1>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-12">
                             <p className="fs-5 reveal-element">
                             We offer a range of high-quality services to help you get your business online. From web design to SEO, we have you covered.
                             As dedicated website designers in Rutland, we ensure that every project is a partnership, fostering open communication and shared vision to create impactful digital experiences.    
@@ -27,7 +27,7 @@ const Story = () =>{
                             As dedicated website designers in Rutland, we ensure that every project is a partnership, fostering open communication and shared vision to create impactful digital experiences.    
                             </p>
                         </div>
-                        <div className="col-6 reveal-element">
+                        <div className="col-lg-6 col-12 reveal-element">
                             <img src="https://images.pexels.com/photos/29379901/pexels-photo-29379901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="about-content-image" alt="" />
                         </div>
                         <div className="col-12 my-5 reveal-element">

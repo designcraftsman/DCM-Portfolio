@@ -8,7 +8,7 @@ const ContactHeader = () =>{
                 <h1 className='display-2 reveal-element'>
                     Contact Us
                 </h1>
-                <p className='fs-4 col-6 reveal-element'>
+                <p className='fs-4 col-lg-6 col-10  reveal-element'>
                 We prioritize close collaboration with our clients, ensuring that our web design solutions align perfectly with their needs and goals.
                 </p>
                </div>

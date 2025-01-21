@@ -19,7 +19,7 @@ const NavbarDark = () => {
     <React.Fragment>
       <nav className={`navbar fixed-top navbar-dark ${isScrolled && !menuOpen ? "navbar-dark-scrolled" : "navbar-top"}`}>
         <div className="container my-1 py-0">
-          <div className="d-flex justify-content-between  align-items-center w-100 mx-4 reveal-element">
+          <div className="d-flex justify-content-between  align-items-center w-100 mx-lg-0 mx-4 reveal-element">
             <a className={`navbar-brand fs-1 icon  ${menuOpen ? "text-white" : ""}`} href="/">
               <div className="logo d-flex align-items-center">
                 <span className="text-part pt-2">NE</span>

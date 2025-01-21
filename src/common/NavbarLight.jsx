@@ -18,7 +18,7 @@ const NavbarLight = () => {
     <React.Fragment>
       <nav className={`navbar fixed-top navbar-light ${isScrolled && !menuOpen ? "navbar-light-scrolled" : "navbar-top"}`}>
         <div className="container my-1 py-0">
-          <div className="d-flex justify-content-between align-items-center mx-4 w-100 reveal-element">
+          <div className="d-flex justify-content-between align-items-center mx-lg-0 mx-4 w-100 reveal-element">
              <a className={`navbar-brand fs-1  icon ${menuOpen ? "text-white" : ""}`} href="/">    
              <span className="logo">
                 <span className="text-part">NE</span>

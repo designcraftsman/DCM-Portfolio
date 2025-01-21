@@ -20,7 +20,7 @@ const ServiceDetails = () => {
                             Internal team of creatives, project managers, the Creative Director and development team to blend user needs and business goals into seamless, effective design experiences. You will need to demonstrate a fundamental understanding of design principles
                             </p>
                             <div className='row my-5 align-items-center'>
-                                <div className='col-5'>
+                                <div className='col-lg-5 col-12'>
                                     <div className='d-flex justify-content-between gap-5 align-items-start my-3'>
                                         <span className='border p-3 rounded-circle display-4'>
                                             1
@@ -75,7 +75,7 @@ const ServiceDetails = () => {
                                     </div>
                                     
                                 </div>
-                                <div className='col-5 mx-auto'>
+                                <div className='col-lg-5 col-12 mx-auto'>
                                     <img src="https://images.pexels.com/photos/28948420/pexels-photo-28948420/free-photo-of-cathedrale-gothique-reflet-dans-une-flaque-d-eau-sur-un-pave.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-fluid rounded my-3" alt="" />
                                     <img src="https://images.pexels.com/photos/18099344/pexels-photo-18099344/free-photo-of-noir-et-blanc-building-batiment-immeuble.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className='img-fluid rounded my-3' alt="" />
                                 </div>
