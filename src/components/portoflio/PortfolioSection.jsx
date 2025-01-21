@@ -35,15 +35,15 @@ const PortfolioSection = () => {
     <div className="bg-light">
       <section className="section-dark section-dark-2 ">
         <div className="container">
-          <h2 className="display-4 col-6 reveal-element">
+          <h2 className="display-4 col-lg-6 col-12 reveal-element">
             Featured Projects
           </h2>
-          <p className="fs-5 col-6 reveal-element">
+          <p className="fs-5 col-lg-6 col-12 reveal-element">
             As dedicated website designers in Rutland, we ensure that every project is a partnership, fostering open communication and shared vision to create impactful digital experiences.
           </p>
           <div className="row mt-5  d-flex justify-content-between">
             {portfolioData.map((project) => (
-            <div className="col-6 my-3 " key={project.id}>
+            <div className="col-lg-6 col-12 my-3 " key={project.id}>
                 <ProjectCard
                     title={project.title}
                     image={project.image}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../assets/logo/logo-white.svg";
 
 const NavbarLight = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,12 +18,14 @@ const NavbarLight = () => {
     <React.Fragment>
       <nav className={`navbar fixed-top navbar-light ${isScrolled && !menuOpen ? "navbar-light-scrolled" : "navbar-top"}`}>
         <div className="container my-1 py-0">
-          <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
-            <a className={`navbar-brand fs-1 ${menuOpen ? "text-white" : ""}`} href="/">
-              <span className="logo">
-                Motion Craft
+          <div className="d-flex justify-content-between align-items-center mx-4 w-100 reveal-element">
+             <a className={`navbar-brand fs-1  icon ${menuOpen ? "text-white" : ""}`} href="/">    
+             <span className="logo">
+                <span className="text-part">NE</span>
+                <img src={logo} className="navbar__logo" alt="" />
+                <span className="text-part">ORA</span>
               </span>
-            </a>
+                      </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
               <div className={`hamburger-init light ${menuOpen ? "active" : ""}`}>
                 <span className="bar top-bar"></span>

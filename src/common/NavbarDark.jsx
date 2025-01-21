@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo/logo-dark.svg";
+import logoDark from "../assets/logo/logo-dark.svg";
+import logoWhite from "../assets/logo/logo-white.svg";
 
 const NavbarDark = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,11 +19,18 @@ const NavbarDark = () => {
     <React.Fragment>
       <nav className={`navbar fixed-top navbar-dark ${isScrolled && !menuOpen ? "navbar-dark-scrolled" : "navbar-top"}`}>
         <div className="container my-1 py-0">
-          <div className="d-flex justify-content-between align-items-center w-100 reveal-element">
-          <a className={`navbar-brand fs-1  icon ${menuOpen ? "text-white" : ""}`} href="/">
-           
-            <img src={logo} className="navbar__logo" alt="" />
-          </a>
+          <div className="d-flex justify-content-between  align-items-center w-100 mx-4 reveal-element">
+            <a className={`navbar-brand fs-1 icon  ${menuOpen ? "text-white" : ""}`} href="/">
+              <div className="logo d-flex align-items-center">
+                <span className="text-part pt-2">NE</span>
+                <img 
+                  src={menuOpen ? logoWhite : logoDark} 
+                  className="navbar__logo " 
+                  alt="logo" 
+                />
+                <span className="text-part pt-2">ORA</span>
+              </div>
+            </a>
             <button onClick={() => setMenuOpen(!menuOpen)} className="btn" aria-label="Toggle Menu">
               <div className={`hamburger-init ${menuOpen ? "active" : ""}`}>
                 <span className="bar top-bar"></span>

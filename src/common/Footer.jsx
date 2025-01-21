@@ -7,10 +7,10 @@ import { CiFacebook , CiInstagram , CiLinkedin , CiTwitter} from "react-icons/ci
 
 const Footer =() => {
   return (
-    <footer className="bg-dark text-white ">
+    <footer className="bg-dark text-white pt-5">
       <div className="container my-0 py-0">
-        <div className='row'>
-          <div className='col-md-6 border-end border-1  py-5 mx-auto'>
+        <div className='row '>
+          <div className='col-lg-6 col-10 border-end border-1  mx-auto'>
             <img src={Contact} className='service-icon' alt="" />
             <h3 className='display-6'>Ready to Get Started?</h3>
             <p className='fs-6'>If our work resonates with you, let’s chat! We’re now scheduling projects for November and beyond.</p>
@@ -19,7 +19,7 @@ const Footer =() => {
               <span className="btn-icon"><IoChevronForwardSharp /></span>
             </button>
           </div>
-          <div className='col-md-6  py-5  mx-auto ps-5'>
+          <div className='col-lg-6 col-10 py-5  mx-auto ps-lg-5'>
             <img src={Socials} className='service-icon' alt="" />
             <h3 className='display-6'>Stay Connected with Us!</h3>
             <p className='fs-6'>Follow us on social media to see our latest projects, get inspired, and stay updated on what’s happening behind the scenes!</p>

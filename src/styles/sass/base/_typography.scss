@@ -28,13 +28,13 @@ p{
 
 .display-5{
     line-height: 120%;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
     font-weight: 500;
 }
 
 .display-6{
     line-height: 120%;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
     font-weight: 500;
 }
 
@@ -45,5 +45,6 @@ h1,h2,h3,h4,h5,h6,.btn,button{
 
 .logo{
     font-family: $font-family-logo;
+    letter-spacing: 4px;
 }
 

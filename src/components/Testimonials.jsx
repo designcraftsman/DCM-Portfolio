@@ -7,7 +7,7 @@ const Testimonials = () => {
         <section className='section-light section-light-2 ' >
             <div className='container '>
                 <div className='row align-items-center justify-content-between reveal-element'>
-                <h2 className='display-2 col-6 '>
+                <h2 className='display-2 col-lg-6 col-9'>
                 What Our Clients Say About Us
                 </h2>
                 <div className='col-3'>

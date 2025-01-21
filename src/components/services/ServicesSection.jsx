@@ -52,10 +52,10 @@ const ServicesSection = () => {
     <div className="bg-light container-rounded">
       <section className="section-dark section-dark-1 ">
         <div className="container ">
-          <h2 className="display-6  col-5 reveal-element">
+          <h2 className="display-6  col-lg-5 col-12 reveal-element">
             Solutions for Your Vision
           </h2>
-          <p className="fs-4 col-7 reveal-element">
+          <p className="fs-4 col-lg-7 col-12 reveal-element">
             We offer a range of high-quality services to help you get your business online. From web design to SEO, we have you covered.
           </p>
 
@@ -64,7 +64,7 @@ const ServicesSection = () => {
               <a 
                 href="/service-details" 
                 key={service.id} 
-                className={`col-3 text-decoration-none service-card ${
+                className={`col-lg-3 col-md-5 col-10 text-lg-start text-center mx-auto text-decoration-none service-card ${
                   hoveredService && hoveredService !== service.id ? 'blur' : ''
                 }`}
                 onMouseEnter={() => setHoveredService(service.id)}

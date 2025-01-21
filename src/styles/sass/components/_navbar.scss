@@ -39,7 +39,7 @@
   }
 
   &__logo{
-    width: 150px;
+    width:45px;
   }
 
   &-dark {
@@ -58,6 +58,34 @@
         color: white;
       }
     }
+  }
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .text-part {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .text-part {
+      filter: blur(3px);
+      opacity: 0.5;
+    }
+    
+    .navbar__logo {
+      filter: blur(0);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .navbar__logo {
+    transition: all 0.3s ease;
   }
 }
 

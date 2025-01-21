@@ -12100,13 +12100,13 @@ p {
 
 .display-5 {
   line-height: 120%;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   font-weight: 500;
 }
 
 .display-6 {
   line-height: 120%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   font-weight: 500;
 }
 
@@ -12116,6 +12116,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
 
 .logo {
   font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 4px;
 }
 
 .section-light {
@@ -12210,7 +12211,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
   color: black;
 }
 .navbar__logo {
-  width: 150px;
+  width: 45px;
 }
 .navbar-dark .navbar-top {
   background-color: transparent;
@@ -12223,6 +12224,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .btn, button {
 }
 .navbar-dark .navbar-brand.text-white {
   color: white;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo .text-part {
+  transition: all 0.3s ease;
+}
+.logo:hover .text-part {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+.logo:hover .navbar__logo {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+.logo .navbar__logo {
+  transition: all 0.3s ease;
 }
 
 .menu-link {
@@ -12615,7 +12638,7 @@ img.reveal-text {
 }
 
 .service-icon {
-  width: 150px;
+  width: 100px;
   margin-left: -20px;
 }
 
