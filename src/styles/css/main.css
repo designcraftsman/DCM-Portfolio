@@ -12014,6 +12014,11 @@ textarea.form-control-lg {
   overflow: hidden; /* Prevent animation overflow */
   transition: color 0.6s ease, border-color 0.6s ease;
 }
+@media screen and (max-width: 768px) {
+  .contact-us-btn-light {
+    padding: 4px 8px;
+  }
+}
 
 /* Background animation using pseudo-element */
 .contact-us-btn-light::before {
