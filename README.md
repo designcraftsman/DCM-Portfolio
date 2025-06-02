@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# DCM-Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DCM-Portfolio is a React-based portfolio website designed to showcase services, projects, testimonials, and FAQs. It features a responsive design, smooth animations, and reusable components.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Hero Section
+- **Dynamic Text Reveal**: Smooth animations for text and images.
+- **Call-to-Action**: Includes a "Contact Us" button for user engagement.
 
-### `npm start`
+### About Section
+- **Story Section**: Highlights the company's story and mission.
+- **Image Integration**: Displays relevant images alongside text.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Portfolio Section
+- **Project Cards**: Interactive cards with hover effects.
+- **Dynamic Filtering**: Filter projects by categories.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Services Section
+- **Service Details**: Provides detailed information about services.
+- **Step-by-Step Process**: Visualizes the workflow with numbered steps.
 
-### `npm test`
+### Testimonials Section
+- **Slider**: Displays client testimonials in a carousel format.
+- **Interactive Cards**: Hover effects for testimonial cards.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### FAQs Section
+- **Accordion Style**: Expandable questions for better user experience.
+- **Common Queries**: Answers to frequently asked questions.
 
-### `npm run build`
+### Contact Section
+- **Contact Form**: Collects user inquiries with validation.
+- **Dynamic Icons**: Displays contact details with icons.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
+- **React.js**: Component-based architecture for building the user interface.
+- **React Router**: Dynamic routing for navigation between pages.
+- **Bootstrap**: Responsive design framework.
+- **SASS**: Modular styling with variables and mixins.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tools
+- **Vite**: Build tool for fast development.
+- **ESLint**: Code quality and linting.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+DCM-Portfolio/
+├── .gitignore
+├── package.json
+├── README.md
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+├── src/
+│   ├── App.jsx
+│   ├── index.js
+│   ├── assets/
+│   │   ├── icons/
+│   │   ├── logo/
+│   ├── common/
+│   │   ├── Footer.jsx
+│   │   ├── HeaderLight.jsx
+│   │   ├── NavbarDark.jsx
+│   │   ├── NavbarLight.jsx
+│   │   ├── TextRevealAnimation.jsx
+│   ├── components/
+│   │   ├── faqs.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── faqs/
+│   │   ├── hero/
+│   │   ├── portoflio/
+│   │   ├── services/
+│   ├── data/
+│   │   ├── faqs.jsx
+│   │   ├── testimonials.jsx
+│   ├── pages/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   ├── Portfolio.jsx
+│   │   ├── ProjectDetails.jsx
+│   │   ├── ServiceDetails.jsx
+│   │   ├── Services.jsx
+│   ├── styles/
+│       ├── css/
+│       │   ├── main.css
+│       ├── sass/
+│           ├── components/
+│           │   ├── _testimonial.scss
+│           │   ├── _heroSection.scss
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## MVC Architecture
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project follows a component-based architecture inspired by MVC principles:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Model**: JSON files in the `data` directory serve as the data source for components.
+- **View**: React components in the `components` directory render the user interface.
+- **Controller**: Logic within components handles user interactions and updates the view dynamically.
 
-## Learn More
+## How to Run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open the application in your browser at `http://localhost:3000`.
